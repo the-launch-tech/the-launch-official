@@ -1,0 +1,208 @@
+.gl-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  max-width: 1000px;
+  margin: 3rem auto 5rem;
+}
+
+.gl-wrapper .gl-search {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.gl-wrapper .gl-search select {
+  border: none;
+  width: 33%;
+  margin: 0 5px;
+  background-color: #fff;
+  color: #454545;
+  font-size: 14px;
+  font-family: 'FG Book', sans-serif;
+  border-radius: 0;
+  outline: none;
+  height: 55px;
+}
+
+.gl-wrapper .gl-search input {
+  width: 50%;
+  height: 55px;
+  padding: 10px 0 10px 15px;
+  font-family: 'FG Book', sans-serif;
+  margin: 0 5px;
+  font-size: 14px;
+  outline: none;
+  border-radius: 0;
+  border: solid 1px #0000001a;
+}
+
+.gl-wrapper .gl-search button.dark-blue-button {
+  width: 25%;
+  height: 55px;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: 'FG Demi', sans-serif;
+  margin: 0 0px;
+  border: solid 1px #3a7ca7;
+  background-color: #3a7ca7;
+  border-radius: 0;
+  color: #fff;
+  outline: none;
+  padding: 7px 0 2px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gl-wrapper .gl-search button.transparent-button {
+  width: 25%;
+  height: 55px;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: 'FG Demi', sans-serif;
+  margin: 0 5px;
+  padding: 7px 0 2px;
+  border-radius: 0;
+  background-color: #3782b400;
+  border: solid 1px transparent;
+  color: #484848;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gl-wrapper .gl-search button i {
+  font-size: 21px;
+  margin: 0 10px 0 0;
+}
+
+.gl-wrapper .gl-search button.dark-blue-button:visited {
+  border: solid 1px #3a7ca7;
+  background-color: #3782b4;
+  color: #fff;
+}
+
+.gl-wrapper .gl-search button.dark-blue-button:hover {
+  border: solid 1px #3a7ca7;
+  background-color: #ffffff;
+  color: #3782b4;
+}
+
+.gl-wrapper .gl-search button.dark-blue-button:active {
+  border: solid 1px #3a7ca7;
+  background-color: #3782b4;
+  color: #fff;
+}
+
+.gl-wrapper .gl-search button.transparent-button:visited {
+  background-color: #3782b400;
+  border: solid 1px #484848;
+  color: #484848;
+}
+
+.gl-wrapper .gl-search button.transparent-button:hover {
+  background-color: #ffffff;
+  border: solid 1px #3a7ca7;
+  color: #3a7ca7;
+}
+
+.gl-wrapper .gl-search button.transparent-button:active {
+  background-color: #3782b400;
+  border: solid 1px #484848;
+  color: #484848;
+}
+
+.gl-wrapper .gl-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0.5rem;
+}
+.gl-wrapper .gl-content .gl-results {
+  width: 28%;
+  height: 100%;
+  display: block;
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+}
+.gl-wrapper .gl-content .gl-details {
+  width: 70%;
+  height: 100%;
+  display: block;
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+}
+
+.gl-results-title,
+.gl-details-title {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.glossary-results-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.glossary-results-item {
+  padding: 5px 10px 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  line-height: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.glossary-results-item:hover,
+.glossary-results-item.selected {
+  color: #4b9cd3;
+  background-color: transparent;
+}
+.glossary-results-item:active {
+  background-color: #fff;
+}
+.gl-details-post {
+  padding: 30px 40px 20px;
+}
+.gl-details-posttitle {
+  text-align: center;
+  padding-bottom: 10px;
+  width: 50%;
+  margin: 10px auto 0;
+  min-width: 400px;
+}
+.gl-details-postcontent {
+}
+.gl-details-taxonomies {
+  padding: 5px;
+  border-top: solid 2px #3a7ca7;
+  margin-top: 15px;
+}
+.gl-details-tax {
+  margin: 20px;
+}
+.gl-details-tax-title {
+  font-family: 'FG Demi', sans-serif;
+  margin: 0;
+}
+.gl-details-tax-list {
+  margin: 0 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+.gl-details-tax-listitem {
+  font-size: 13px;
+}
