@@ -1,8 +1,8 @@
 <?php
 
-class Kenan {
-	const LANG = 'kenan';
-	const VERSION = '1';
+class TheLaunch {
+	const LANG = 'thelaunch';
+	const VERSION = '1.0.0';
 
   private static $instance = null;
 
@@ -20,24 +20,14 @@ class Kenan {
 		require $CLASSES.'PostTypes.php';
 		require $CLASSES.'Taxonomies.php';
 		require $CLASSES.'Assets.php';
-		require $CLASSES.'Partials.php';
-		require $CLASSES.'SideNavigation.php';
-		require $CLASSES.'Shortcodes.php';
-		require $CLASSES.'Glossary.php';
 
 		Theme::set();
-		Utilities::configureAcf();
-		Utilities::disableGutenberg();
-		Utilities::removeDefaultPostType();
-		Utilities::removeComments();
+		Theme::configureAcf();
+		Theme::disableGutenberg();
 		Taxonomies::registerTaxonomies();
 		PostTypes::registerPostTypes();
 		Assets::enqueue();
-		SideNavigation::get_instance();
-		Partials::get_instance();
-		Shortcodes::get_instance();
-		Glossary::get_instance();
 	}
 }
 
-Kenan::initialize();
+TheLaunch::initialize();

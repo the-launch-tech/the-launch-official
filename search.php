@@ -9,11 +9,13 @@
 
 get_header();
 ?>
+<div id="content" class="site-content">
 	<div id="primary" class="content-area">
-	<?php if ( have_posts() ) : ?>
+	<?php
+	if ( have_posts() ) : ?>
 		<header class="page-header">
 			<h1 class="page-title">
-				<?php printf( esc_html__( 'Search: %s', 'kenan-it' ), '<span class="search-string">' . get_search_query() . '</span>' ); ?>
+				<?php printf( esc_html__( 'Search: %s', 'thelaunch' ), '<span class="search-string">' . get_search_query() . '</span>' ); ?>
 			</h1>
 		</header>
 		<?php
@@ -27,5 +29,6 @@ get_header();
 	endif;
 	?>
 	</div>
+</div>
 <?php
 get_footer();

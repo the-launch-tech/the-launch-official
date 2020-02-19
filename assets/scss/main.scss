@@ -1,0 +1,26 @@
+@import 'fonts';
+@import 'hljs';
+
+a {
+  color: red;
+  font-family: 'Centauri';
+
+  &:visited {
+    color: yellow;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: green;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}

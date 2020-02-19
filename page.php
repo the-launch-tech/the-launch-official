@@ -11,8 +11,11 @@
  *
  * @package Kenan_IT
  */
+
+
 get_header();
 ?>
+<div id="content" class="site-content">
 	<div id="primary" class="content-area">
 	<?php
 	while ( have_posts() ) :
@@ -21,5 +24,6 @@ get_header();
 	endwhile;
 	?>
 	</div>
+</div>
 <?php
 get_footer();

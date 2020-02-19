@@ -14,6 +14,7 @@
 
 get_header();
 ?>
+<div id="content" class="site-content">
 	<div id="primary" class="content-area">
 	<?php
 	if ( have_posts() ) :
@@ -27,5 +28,6 @@ get_header();
 	endif;
 	?>
 	</div>
+</div>
 <?php
 get_footer();

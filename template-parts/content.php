@@ -19,12 +19,13 @@
 		endif;
 		?>
 	</header>
-	<?php kenan_it_post_thumbnail(); ?>
+	<?php if (get_the_post_thumbnail_url()) : ?>
+	<?php endif; ?>
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'kenan-it' ),
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'thelaunch' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -34,12 +35,11 @@
 			get_the_title()
 		) );
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kenan-it' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'thelaunch' ),
 			'after'  => '</div>',
 		) );
 		?>
 	</div>
 	<footer class="entry-footer">
-		<?php kenan_it_entry_footer(); ?>
 	</footer>
 </article>

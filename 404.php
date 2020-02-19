@@ -9,40 +9,40 @@
 
 get_header();
 ?>
+<div id="content" class="site-content">
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'kenan-it' ); ?></h1>
-				</header>
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'kenan-it' ); ?></p>
-					<?php
-					get_search_form();
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'kenan-it' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div>
-					<?php
-					$kenan_it_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'kenan-it' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$kenan_it_archive_content" );
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+		<section class="error-404 not-found">
+			<header class="page-header">
+				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'thelaunch' ); ?></h1>
+			</header>
+			<div class="page-content">
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'thelaunch' ); ?></p>
+				<?php
+				get_search_form();
+				the_widget( 'WP_Widget_Recent_Posts' );
+				?>
+				<div class="widget widget_categories">
+					<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'thelaunch' ); ?></h2>
+					<ul>
+						<?php
+						wp_list_categories( array(
+							'orderby'    => 'count',
+							'order'      => 'DESC',
+							'show_count' => 1,
+							'title_li'   => '',
+							'number'     => 10,
+						) );
+						?>
+					</ul>
 				</div>
-			</section>
-		</main>
+				<?php
+				$thelaunch_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'thelaunch' ), convert_smilies( ':)' ) ) . '</p>';
+				the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$thelaunch_archive_content" );
+				the_widget( 'WP_Widget_Tag_Cloud' );
+				?>
+			</div>
+		</section>
 	</div>
+</div>
 <?php
 get_footer();

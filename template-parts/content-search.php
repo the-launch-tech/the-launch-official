@@ -17,6 +17,5 @@
 		<?php the_excerpt(); ?>
 	</div>
 	<footer class="entry-footer">
-		<?php kenan_it_entry_footer(); ?>
 	</footer>
 </article>
