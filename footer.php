@@ -11,7 +11,16 @@
 
 ?>
 </div>
-<footer id="kts-footer" class="kts-footer">
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    <div class="footer-left"></div>
+    <div class="footer-center"></div>
+    <div class="footer-right"></div>
+  </div>
+  <div class="site-info">
+    <span class="site-info-text">©2020 The Launch | Developed and Designed by The Launch</span>
+  </div>
+  <div id="net-selector"></div>
 </footer>
 </div>
 <?php wp_footer(); ?>

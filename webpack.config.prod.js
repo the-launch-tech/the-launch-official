@@ -10,7 +10,7 @@ module.exports = {
   mode: 'production',
   entry: './assets/index.js',
   output: {
-    path: path.resolve(__dirname, '../../../dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     publicPath: '/',
   },
@@ -37,7 +37,13 @@ module.exports = {
       },
       {
         test: /.(css|scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /.(jpg|jpeg|png|gif|mp3|svg|woff|ttf|otf|eot|woff2)$/,
@@ -45,7 +51,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name].[ext]',
+              name: 'wp-content/themes/thelaunch/[path][name].[ext]',
             },
           },
         ],
@@ -55,6 +61,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
+      chunkFilename: '[id].css',
     }),
   ],
 }

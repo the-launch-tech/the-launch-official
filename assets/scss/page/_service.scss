@@ -1,0 +1,197 @@
+&.single-service {
+  article {
+    .entry-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0 40px;
+
+      i {
+        margin-right: 2rem;
+        font-size: 5rem;
+        color: $red;
+
+        @media (max-width: 991px) {
+          font-size: 4rem;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 3.5rem;
+        }
+
+        @media (max-width: 599px) {
+          font-size: 3rem;
+          margin: 0;
+        }
+
+        @media (max-width: 399px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      h3 {
+        font-weight: 600;
+      }
+
+      @media (max-width: 599px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        flex-direction: column;
+      }
+    }
+
+    .entry-content {
+      p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+
+        @media (max-width: 991px) {
+          font-size: 1.1rem;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 1rem;
+        }
+
+        @media (max-width: 599px) {
+          font-size: 0.95rem;
+        }
+
+        @media (max-width: 399px) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .specializations-list-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 3rem 0;
+
+      .specializations-list-title {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .specializations-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: transparentize($white, 0.1);
+        -webkit-box-shadow: 2px 2px 8px -5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 2px 2px 8px -5px rgba(0, 0, 0, 0.75);
+        box-shadow: 2px 2px 8px -5px rgba(0, 0, 0, 0.75);
+
+        .specialization-item {
+          padding: 1rem 2rem;
+
+          .specialization-name {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .additional-services {
+    margin: 2rem 0;
+
+    .additional-services-title {
+      text-align: center;
+    }
+
+    .additional-services-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 3rem;
+
+      .additional-service {
+        width: 40%;
+        margin: 0 5% 3rem;
+        padding: 0.5rem;
+        text-align: center;
+        -webkit-box-shadow: 2px 2px 8px -5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 2px 2px 8px -5px rgba(0, 0, 0, 0.75);
+        box-shadow: 2px 2px 8px -5px rgba(0, 0, 0, 0.75);
+
+        .additional-service-icon {
+          font-size: 3rem;
+          color: $blue;
+
+          @media (max-width: 767px) {
+            font-size: 2.5rem;
+          }
+
+          @media (max-width: 599px) {
+            font-size: 2.25rem;
+          }
+        }
+
+        .additional-service-title {
+          margin: 0.3rem 0;
+
+          a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: $blue;
+
+            &:visited {
+              color: $blue;
+            }
+
+            &:hover {
+              color: $black;
+            }
+
+            &:active {
+              color: $blue;
+            }
+          }
+        }
+
+        @media (max-width: 991px) {
+          width: 100%;
+          margin: 0 0 2rem;
+        }
+
+        @media (max-width: 767px) {
+          margin: 0 0 1.5rem;
+        }
+
+        @media (max-width: 599px) {
+          margin: 0 0 1.25rem;
+        }
+
+        @media (max-width: 399px) {
+          margin: 0 0 1rem;
+        }
+      }
+
+      @media (max-width: 991px) {
+        margin: 2.5rem;
+      }
+
+      @media (max-width: 767px) {
+        margin: 2.25rem;
+      }
+
+      @media (max-width: 599px) {
+        margin: 2rem;
+      }
+
+      @media (max-width: 399px) {
+        margin: 1.75rem;
+      }
+    }
+  }
+}

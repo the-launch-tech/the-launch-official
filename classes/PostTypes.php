@@ -3,12 +3,13 @@
 class PostTypes {
 
   public function registerPostTypes() {
-    add_action('init', ['PostTypes', 'entry'], 0);
-    add_action('init', ['PostTypes', 'dashboard'], 0);
-    add_action('init', ['PostTypes', 'footer'], 0);
+    add_action('init', ['PostTypes', 'service'], 0);
+    add_action('init', ['PostTypes', 'portfolio'], 0);
+    add_action('init', ['PostTypes', 'team'], 0);
+    add_action('init', ['PostTypes', 'question'], 0);
   }
 
-  public static function entry() {
+  public static function service() {
   	register_post_type('service', [
 		  'label'                   => __('Service', 'thelaunch'),
 		  'description'             => __('Business Glossary Services', 'thelaunch'),
@@ -52,18 +53,14 @@ class PostTypes {
   		'show_in_admin_bar'     => true,
   		'show_in_nav_menus'     => false,
   		'can_export'            => true,
-  		'has_archive'           => true,
-  		'exclude_from_search'   => false,
+  		'has_archive'           => false,
+  		'exclude_from_search'   => true,
   		'publicly_queryable'    => true,
-      'rewrite'               => [
-        'slug' => 'website-and-app-services',
-        'with_front' => false
-      ],
   		'capability_type'       => 'page',
   	]);
   }
 
-  public static function dashboard() {
+  public static function portfolio() {
   	register_post_type('portfolio', [
 		  'label'                   => __('Portfolio', 'thelaunch'),
 		  'description'             => __('Portfolios', 'thelaunch'),
@@ -97,7 +94,7 @@ class PostTypes {
     		'filter_items_list'     => __('Filter items list', 'thelaunch'),
     	],
   		'supports'              => ['title', 'editor', 'thumbnail', 'excerpt', 'post-attributes'],
-      'supports'              => ['client', 'specialization'],
+      'taxonomies'              => ['client', 'specialization'],
   		'hierarchical'          => false,
   		'public'                => true,
   		'show_ui'               => true,
@@ -107,18 +104,14 @@ class PostTypes {
   		'show_in_admin_bar'     => true,
   		'show_in_nav_menus'     => false,
   		'can_export'            => true,
-  		'has_archive'           => true,
-  		'exclude_from_search'   => false,
+  		'has_archive'           => false,
+  		'exclude_from_search'   => true,
   		'publicly_queryable'    => true,
-  		'rewrite'               => [
-        'slug' => 'website-and-app-portfolio',
-        'with_front' => false
-      ],
   		'capability_type'       => 'page',
   	]);
   }
 
-  public static function footer() {
+  public static function team() {
     register_post_type('team', [
   		'label'                 => __('Team', 'thelaunch'),
   		'description'           => __('Team People, select one for your active footer', 'thelaunch'),
@@ -162,13 +155,59 @@ class PostTypes {
   		'show_in_admin_bar'     => true,
   		'show_in_nav_menus'     => false,
   		'can_export'            => true,
-  		'has_archive'           => true,
-  		'exclude_from_search'   => false,
+  		'has_archive'           => false,
+  		'exclude_from_search'   => true,
   		'publicly_queryable'    => true,
-      'rewrite'               => [
-        'slug' => 'team-members',
-        'with_front' => false
-      ],
+  		'capability_type'       => 'post',
+  	]);
+  }
+
+  public static function question() {
+    register_post_type('question', [
+  		'label'                 => __('Question', 'thelaunch'),
+  		'description'           => __('Question, select one for your active footer', 'thelaunch'),
+  		'labels'                => [
+  			'name'                  => _x('Questions', 'Post Type General Name', 'thelaunch'),
+  			'singular_name'         => _x('Question', 'Post Type Singular Name', 'thelaunch'),
+  			'menu_name'             => __('Questions', 'thelaunch'),
+  			'name_admin_bar'        => __('Questions', 'thelaunch'),
+  			'archives'              => __('Question Archives', 'thelaunch'),
+  			'attributes'            => __('Question Attributes', 'thelaunch'),
+  			'parent_item_colon'     => __('Parent Question:', 'thelaunch'),
+  			'all_items'             => __('All Questions', 'thelaunch'),
+  			'add_new_item'          => __('Add New Question', 'thelaunch'),
+  			'add_new'               => __('Add New', 'thelaunch'),
+  			'new_item'              => __('New Question', 'thelaunch'),
+  			'edit_item'             => __('Edit Question', 'thelaunch'),
+  			'update_item'           => __('Update Question', 'thelaunch'),
+  			'view_item'             => __('View Question', 'thelaunch'),
+  			'view_items'            => __('View Questions', 'thelaunch'),
+  			'search_items'          => __('Search Question', 'thelaunch'),
+  			'not_found'             => __('Not found', 'thelaunch'),
+  			'not_found_in_trash'    => __('Not found in Trash', 'thelaunch'),
+  			'featured_image'        => __('Featured Image', 'thelaunch'),
+  			'set_featured_image'    => __('Set featured image', 'thelaunch'),
+  			'remove_featured_image' => __('Remove featured image', 'thelaunch'),
+  			'use_featured_image'    => __('Use as featured image', 'thelaunch'),
+  			'insert_into_item'      => __('Insert into Question', 'thelaunch'),
+  			'uploaded_to_this_item' => __('Uploaded to this Question', 'thelaunch'),
+  			'items_list'            => __('Questions list', 'thelaunch'),
+  			'items_list_navigation' => __('Questions list navigation', 'thelaunch'),
+  			'filter_items_list'     => __('Filter Questions list', 'thelaunch'),
+  		],
+  		'supports'              => ['title', 'page-attributes'],
+  		'hierarchical'          => false,
+  		'public'                => true,
+  		'show_ui'               => true,
+  		'show_in_menu'          => true,
+  		'menu_position'         => 5,
+  		'menu_icon'             => 'dashicons-lightbulb',
+  		'show_in_admin_bar'     => true,
+  		'show_in_nav_menus'     => false,
+  		'can_export'            => true,
+  		'has_archive'           => false,
+  		'exclude_from_search'   => true,
+  		'publicly_queryable'    => true,
   		'capability_type'       => 'post',
   	]);
   }

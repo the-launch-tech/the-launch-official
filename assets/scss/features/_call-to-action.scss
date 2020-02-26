@@ -1,0 +1,148 @@
+#call-to-action {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $red;
+  padding: 40px 0;
+
+  .call-to-action-head {
+    width: 100%;
+    margin-bottom: 40px;
+
+    .call-to-action-title {
+      text-align: center;
+      color: $white;
+    }
+
+    .call-to-action-text {
+      color: $white;
+      text-align: center;
+      font-weight: 700;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    @media (max-width: 991px) {
+      margin-bottom: 35px;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 599px) {
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 399px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .call-to-action-anchor-wrapper {
+    width: 33%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    @media (max-width: 599px) {
+      padding: 0.15rem;
+    }
+
+    .call-to-action-anchor {
+      border: solid 2px $white;
+      color: $white;
+      background-color: transparent;
+      padding: 1.2rem 0.3rem;
+      font-size: 24px;
+      text-decoration: none;
+      font-weight: 100;
+      font-family: 'Nord';
+      width: 100%;
+      text-align: center;
+      transition: 0.5s;
+
+      i {
+        margin-right: 1rem;
+
+        @media (max-width: 991px) {
+          margin-right: 0.9rem;
+        }
+
+        @media (max-width: 767px) {
+          margin-right: 0.8rem;
+        }
+
+        @media (max-width: 599px) {
+          margin-right: 0.7rem;
+        }
+
+        @media (max-width: 399px) {
+          margin-right: 0.6rem;
+        }
+      }
+
+      &:visited {
+        border: solid 2px $white;
+        color: $white;
+        background-color: transparent;
+      }
+
+      &:hover {
+        border: solid 2px $red;
+        color: $red;
+        background-color: $white;
+      }
+
+      &:active {
+        border: solid 2px $white;
+        color: $white;
+        background-color: transparent;
+      }
+
+      @media (max-width: 991px) {
+        padding: 1rem 0.25rem;
+        font-size: 20px;
+      }
+
+      @media (max-width: 767px) {
+        padding: 0.9rem 0.235rem;
+        font-size: 18px;
+        width: 90%;
+      }
+
+      @media (max-width: 599px) {
+        padding: 0.8rem 0.225rem;
+        font-size: 16px;
+      }
+
+      @media (max-width: 399px) {
+        padding: 0.75rem 0.2rem;
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 35px 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px 10px;
+  }
+
+  @media (max-width: 599px) {
+    padding: 25px 10px;
+  }
+
+  @media (max-width: 399px) {
+    padding: 20px 10px;
+  }
+}

@@ -6,7 +6,6 @@ class Taxonomies {
     add_action('init', array('Taxonomies', 'role'), 0);
 		add_action('init', array('Taxonomies', 'client'), 0);
 		add_action('init', array('Taxonomies', 'specialization'), 0);
-		add_action('init', array('Taxonomies', 'subject'), 0);
   }
 
   public static function role() {
@@ -19,10 +18,6 @@ class Taxonomies {
 
   public static function specialization() {
     register_taxonomy('specialization', ['portfolio', 'service', 'team'], self::buildArgs('Specialization', 'specializations'));
-  }
-
-  public static function subject() {
-    register_taxonomy('subject', ['post'], self::buildArgs('Subject', 'Subjects'));
   }
 
   public static function buildArgs($single, $plural) {

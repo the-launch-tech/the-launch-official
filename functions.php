@@ -20,6 +20,12 @@ class TheLaunch {
 		require $CLASSES.'PostTypes.php';
 		require $CLASSES.'Taxonomies.php';
 		require $CLASSES.'Assets.php';
+		require $CLASSES.'features/CallToAction.php';
+		require $CLASSES.'features/ServicePreview.php';
+		require $CLASSES.'features/PortfolioPreview.php';
+		require $CLASSES.'features/AsyncLoader.php';
+		require $CLASSES.'features/TeamMembers.php';
+		require $CLASSES.'features/FrequentlyAskedQuestions.php';
 
 		Theme::set();
 		Theme::configureAcf();
@@ -27,6 +33,12 @@ class TheLaunch {
 		Taxonomies::registerTaxonomies();
 		PostTypes::registerPostTypes();
 		Assets::enqueue();
+		CallToAction::setShortcode();
+		ServicePreview::setShortcode();
+		PortfolioPreview::setShortcode();
+		TeamMembers::setShortcode();
+		FrequentlyAskedQuestions::setShortcode();
+		PortfolioPreview::registerApi();
 	}
 }
 

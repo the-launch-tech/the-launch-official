@@ -1,0 +1,69 @@
+.team-header {
+}
+
+#team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+
+  .team-member {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 1.5rem;
+    -webkit-box-shadow: 1px 1px 15px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 15px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 1px 15px -9px rgba(0, 0, 0, 0.75);
+
+    .team-member-headshot {
+      width: 40%;
+      object-fit: cover;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .team-member-body {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-left: 2rem;
+
+      .team-member-name {
+        margin: 0 auto 0.5rem;
+      }
+
+      .team-member-bio {
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding-top: 45px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+  }
+
+  @media (max-width: 599px) {
+    padding-top: 20px;
+  }
+
+  @media (max-width: 399px) {
+    padding-top: 10px;
+  }
+}

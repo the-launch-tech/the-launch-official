@@ -1,26 +1,31 @@
 @import 'fonts';
 @import 'hljs';
 
-a {
-  color: red;
-  font-family: 'Centauri';
+$red: #fa3939;
+$white: #fff;
+$black: #202020;
+$blue: #3b6377;
+$green: #11ac63;
 
-  &:visited {
-    color: yellow;
-  }
+body {
+  font-family: 'Metrisch';
+  color: $black;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: green;
-  }
-
-  &:focus {
-    outline: thin dotted;
-  }
-
-  &:hover,
-  &:active {
-    outline: 0;
-  }
+  @import 'utils/base';
+  @import 'utils/components';
+  @import 'partials/header';
+  @import 'partials/home-header';
+  @import 'page/page';
+  @import 'page/service';
+  @import 'page/portfolio';
+  @import 'page/not-found';
+  @import 'partials/footer';
+  @import 'features/call-to-action';
+  @import 'features/service-preview';
+  @import 'features/portfolio-preview';
+  @import 'features/async-loader';
+  @import 'features/team';
+  @import 'features/contact-options';
+  @import 'features/faq';
+  @import 'features/contact-details';
 }

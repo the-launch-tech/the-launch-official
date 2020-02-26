@@ -58,6 +58,13 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 /* Sections
@@ -70,22 +77,6 @@ html {
 body {
   margin: 0;
   font-weight: 100;
-  font-family: 'FG Book', sans-serif;
-  overflow-x: hidden;
-}
-
-#page {
-  overflow-x: hidden;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content

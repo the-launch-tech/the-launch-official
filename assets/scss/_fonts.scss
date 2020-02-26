@@ -6,30 +6,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Cabin';
-  src: url('../fonts/cabin/Cabin-Bold.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Cabin';
-  src: url('../fonts/cabin/Cabin-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Cabin';
-  src: url('../fonts/cabin/Cabin-Medium.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Cabin';
-  src: url('../fonts/cabin/Cabin-Regular.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Nord';
   src: url('../fonts/nord/Nord-Black.eot');
   src: url('../fonts/nord/Nord-Black.eot?#iefix') format('embedded-opentype'),
@@ -105,4 +81,49 @@
   font-style: normal;
   font-weight: 100;
   text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Metrisch';
+  font-weight: 900;
+  src: url('../fonts/metrisch/Metrisch-Bold-webfont.eot');
+  src: url('../fonts/metrisch/Metrisch-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/metrisch/Metrisch-Bold-webfont.woff2') format('woff2'),
+    url('../fonts/metrisch/Metrisch-Bold-webfont.woff') format('woff'),
+    url('../fonts/metrisch/Metrisch-Bold-webfont.ttf') format('truetype'),
+    url('../fonts/metrisch/Metrisch-Bold-webfont.svg#metrischbold') format('svg');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Metrisch';
+  font-weight: 600;
+  src: url('../fonts/metrisch/Metrisch-Medium-webfont.eot');
+  src: url('../fonts/metrisch/Metrisch-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/metrisch/Metrisch-Medium-webfont.woff2') format('woff2'),
+    url('../fonts/metrisch/Metrisch-Medium-webfont.woff') format('woff'),
+    url('../fonts/metrisch/Metrisch-Medium-webfont.ttf') format('truetype'),
+    url('../fonts/metrisch/Metrisch-Medium-webfont.svg#metrischmedium') format('svg');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Metrisch';
+  font-weight: 400;
+  src: url('../fonts/metrisch/Metrisch-Light-webfont.eot');
+  src: url('../fonts/metrisch/Metrisch-Light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/metrisch/Metrisch-Light-webfont.woff2') format('woff2'),
+    url('../fonts/metrisch/Metrisch-Light-webfont.woff') format('woff'),
+    url('../fonts/metrisch/Metrisch-Light-webfont.ttf') format('truetype'),
+    url('../fonts/metrisch/Metrisch-Light-webfont.svg#metrischlight') format('svg');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Metrisch';
+  font-weight: 200;
+  src: url('../fonts/metrisch/Metrisch-ExtraLight-webfont.eot');
+  src: url('../fonts/metrisch/Metrisch-ExtraLight-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/metrisch/Metrisch-ExtraLight-webfont.woff2') format('woff2'),
+    url('../fonts/metrisch/Metrisch-ExtraLight-webfont.woff') format('woff'),
+    url('../fonts/metrisch/Metrisch-ExtraLight-webfont.ttf') format('truetype'),
+    url('../fonts/metrisch/Metrisch-ExtraLight-webfont.svg#metrischextralight') format('svg');
+  font-style: normal;
 }

@@ -21,14 +21,12 @@
   "dependencies": {
     "@babel/runtime": "^7.8.4",
     "aos": "^2.3.4",
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
-    "d3": "^5.15.0",
-    "d3-geo": "^1.11.9",
     "dotenv": "^8.2.0",
     "highlight.js": "^9.18.1",
-    "regenerator-runtime": "^0.13.3",
-    "three": "^0.113.2",
-    "topojson-client": "^3.1.0"
+    "pm2": "^4.2.3",
+    "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

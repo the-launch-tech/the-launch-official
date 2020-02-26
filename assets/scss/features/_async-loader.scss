@@ -1,0 +1,172 @@
+#async-loader {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: 0.5s;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &.loading {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000;
+    background-color: $white;
+  }
+
+  .async-loader-title {
+    color: $black;
+    margin-bottom: 1rem;
+  }
+
+  .async-loader-text {
+    color: $black;
+    margin-bottom: 10rem;
+    font-size: 1.2rem;
+    font-family: 'Nord';
+
+    @media (max-width: 991px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 599px) {
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 399px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  $color: $blue;
+  $colorRight: darken($color, 15%);
+  $colorLeft: darken($color, 5%);
+  $shadow: lighten($black, 50%);
+
+  .boxes {
+    --size: 48px;
+    --duration: 600ms;
+    height: calc(var(--size) * 2);
+    width: calc(var(--size) * 3);
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    margin-top: calc(var(--size) * 1.5 * -1);
+    transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+    .box {
+      width: var(--size);
+      height: var(--size);
+      top: 0;
+      left: 0;
+      position: absolute;
+      transform-style: preserve-3d;
+      &:nth-child(1) {
+        transform: translate(100%, 0);
+        animation: box1 var(--duration) linear infinite;
+      }
+      &:nth-child(2) {
+        transform: translate(0, 100%);
+        animation: box2 var(--duration) linear infinite;
+      }
+      &:nth-child(3) {
+        transform: translate(100%, 100%);
+        animation: box3 var(--duration) linear infinite;
+      }
+      &:nth-child(4) {
+        transform: translate(200%, 0);
+        animation: box4 var(--duration) linear infinite;
+      }
+      & > div {
+        --background: #{$color};
+        --top: auto;
+        --right: auto;
+        --bottom: auto;
+        --left: auto;
+        --translateZ: calc(var(--size) / 2);
+        --rotateY: 0deg;
+        --rotateX: 0deg;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--background);
+        top: var(--top);
+        right: var(--right);
+        bottom: var(--bottom);
+        left: var(--left);
+        transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+        &:nth-child(1) {
+          --top: 0;
+          --left: 0;
+        }
+        &:nth-child(2) {
+          --background: #{$colorRight};
+          --right: 0;
+          --rotateY: 90deg;
+        }
+        &:nth-child(3) {
+          --background: #{$colorLeft};
+          --rotateX: -90deg;
+        }
+        &:nth-child(4) {
+          --background: #{$shadow};
+          --top: 0;
+          --left: 0;
+          --translateZ: calc(var(--size) * 3 * -1);
+        }
+      }
+    }
+  }
+
+  @keyframes box1 {
+    0%,
+    50% {
+      transform: translate(100%, 0);
+    }
+    100% {
+      transform: translate(200%, 0);
+    }
+  }
+
+  @keyframes box2 {
+    0% {
+      transform: translate(0, 100%);
+    }
+    50% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(100%, 0);
+    }
+  }
+
+  @keyframes box3 {
+    0%,
+    50% {
+      transform: translate(100%, 100%);
+    }
+    100% {
+      transform: translate(0, 100%);
+    }
+  }
+
+  @keyframes box4 {
+    0% {
+      transform: translate(200%, 0);
+    }
+    50% {
+      transform: translate(200%, 100%);
+    }
+    100% {
+      transform: translate(100%, 100%);
+    }
+  }
+}

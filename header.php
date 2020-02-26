@@ -28,20 +28,38 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<?php SideNavigation::render(); ?>
-		<?php if (is_home()) : ?>
-			<header id="header" class="header">
-				<?php SearchPane::render(); ?>
-				<div id="globe">
-				</div>
-				<nav id="navigation" class="navigation">
+		<?php AsyncLoader::render(); ?>
+		<?php if (is_front_page()) : ?>
+			<header id="header-home" class="header-home">
+				<nav id="navigation-home" class="navigation-home" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1500">
+					<?php wp_nav_menu(['menu' => 'Primary']); ?>
+					<a href="<?php echo home_url(); ?>" id="logo-home" class="logo-home">
+						<img src="<?php echo home_url(); ?>/wp-content/uploads/2020/02/logo-dark.png" alt="The Launch Logo" title="The Launch Logo" />
+					</a>
 				</nav>
+				<div id="header-title-section" class="header-title-section">
+					<h1 class="header-title" data-aos="fade-right" data-aos-duration="800" data-aos-delay="1500">The Launch</h1>
+					<p class="header-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1500">A small and focused web and application development agency founded in 2019.</p>
+				</div>
+				<div id="globe-selector"></div>
+				<div id="globe-fader"></div>
 			</header>
 		<?php else : ?>
 			<header id="header" class="header">
-				<?php SearchPane::render(); ?>
 				<nav id="navigation" class="navigation">
+					<?php wp_nav_menu(['menu' => 'Interior']); ?>
 				</nav>
+				<?php if (!is_post_type_archive() && !is_single()) : ?>
+					<div id="interior-title-section" class="interior-title-section">
+						<h1 class="interior-title" data-aos="fade-left" data-aos-duration="800" data-aos-delay="2000"><?php the_title(); ?></h1>
+						<h4 class="interior-subtitle" data-aos="fade-left" data-aos-duration="800" data-aos-delay="2000">The Launch</h4>
+					</div>
+				<?php else : ?>
+					<div id="interior-title-section" class="interior-title-section interior-title-archive">
+						<h3 class="interior-subtitle" data-aos="fade-left" data-aos-duration="800" data-aos-delay="2000"><?php the_title(); ?></h3>
+					</div>
+				<?php endif; ?>
+				<div id="wave-selector"></div>
 			</header>
 		<?php endif; ?>
 		<a class="skip-link screen-reader-text" href="#content">

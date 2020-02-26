@@ -1,0 +1,80 @@
+.contact-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 1rem;
+  -webkit-box-shadow: 1px 1px 6px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 6px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 6px -4px rgba(0, 0, 0, 0.75);
+
+  .contact-option {
+    width: 33%;
+    padding: 0 2rem;
+
+    .contact-option-anchor {
+      text-decoration: none;
+      font-weight: 600;
+      border: solid 1px $red;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      display: block;
+      text-align: center;
+      transition: 0.2s;
+
+      &:visited {
+        border: solid 1px $red;
+      }
+
+      &:hover {
+        border: solid 1px $black;
+      }
+
+      &:active {
+        border: solid 1px $red;
+      }
+    }
+
+    .contact-option-text {
+      font-weight: 600;
+      color: $white;
+      text-align: center;
+      width: 100%;
+      display: block;
+      padding: 0.5rem 1rem;
+      border: solid 2px $blue;
+      background-color: $blue;
+      cursor: default;
+
+      i {
+        margin-right: 1rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      width: 50%;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 599px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 599px) {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 399px) {
+    margin-bottom: 1.75rem;
+  }
+}
