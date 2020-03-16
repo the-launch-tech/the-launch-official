@@ -7,6 +7,7 @@ import homeNavScroll from './js/utils/homeNavScroll'
 import portfolioPreview from './js/utils/portfolioPreview'
 import smoothScrollTo from './js/utils/smoothScrollTo'
 import faqAccordion from './js/utils/faqAccordion'
+import vantaUtils from './js/utils/vantaUtils'
 import 'aos/dist/aos.css'
 import './scss/main.scss'
 
@@ -16,6 +17,8 @@ class TheLaunch {
   constructor() {
     this.baseUrl = args.base_url
     this.isHomePage = args.is_home_page
+    this.is404Page = args.is_404
+    this.isContactPage = args.is_contact_page
 
     this.preFetch = this.preFetch.bind(this)
     this.loadInit = this.loadInit.bind(this)
@@ -28,53 +31,24 @@ class TheLaunch {
     AOS.init()
 
     if (this.isHomePage) {
-      VANTA.GLOBE({
-        el: '#globe-selector',
-        mouseControls: true,
-        touchControls: true,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0xfa3939,
-        color2: 0x3873b6,
-        size: 0.6,
-        backgroundColor: 0xf2f2f2,
-      })
       homeNavScroll()
       smoothScrollTo()
       portfolioPreview(this.baseUrl, this.loader)
-    } else {
-      VANTA.DOTS({
-        el: '#wave-selector',
-        mouseControls: true,
-        touchControls: true,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0xffffff,
-        color2: 0xffffff,
-        backgroundColor: 0xfa3939,
-        size: 5.0,
-        spacing: 30.0,
-      })
+    } else if (this.isContactPage) {
       faqAccordion()
     }
-    VANTA.NET({
-      el: '#net-selector',
-      mouseControls: true,
-      touchControls: true,
-      color: 0xfa3939,
-      backgroundColor: 0xffffff,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      scaleMobile: 1.0,
-      points: 6.0,
-      maxDistance: 14.0,
-      spacing: 11.0,
-    })
+
+    if (this.isHomePage) {
+      VANTA.GLOBE(vantaUtils.globe)
+    } else if (this.is404Page) {
+      VANTA.GLOBE(vantaUtils.globe404)
+    } else {
+      VANTA.DOTS(vantaUtils.dots)
+    }
+
+    if (!this.is404Page) {
+      VANTA.NET(vantaUtils.net)
+    }
 
     this.loader = document.getElementById('async-loader')
     setTimeout(() => {

@@ -3,6 +3,15 @@
   height: 80vh;
   position: relative;
 
+  &.footer-404 {
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
   #net-selector {
     width: 100%;
     height: calc(100% - 80px);

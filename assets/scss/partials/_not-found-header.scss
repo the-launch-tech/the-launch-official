@@ -1,0 +1,92 @@
+.header-404 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .navigation-404 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    .menu-interior-container {
+      max-width: 700px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem;
+
+      .menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: auto;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .menu-item {
+          width: 33%;
+          text-align: center;
+
+          a {
+            padding: 0.4rem 2rem;
+            text-decoration: none;
+            font-family: 'Nord';
+            border: solid 1px transparent;
+            background-color: transparent;
+            color: $white;
+            border-radius: 3px;
+            transition: 0.4s;
+
+            &:visited {
+              border: solid 1px transparent;
+              background-color: transparent;
+              color: $white;
+            }
+
+            &:hover {
+              border: solid 1px $red;
+              color: $white;
+            }
+
+            &:active {
+              border: solid 1px $white;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    .logo-404 {
+      img {
+        max-width: 100px;
+        max-height: 70px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.header-404 {
+  top: 0;
+}
+
+&.logged-in {
+  .header-404 {
+    top: 32px;
+
+    @media (max-width: 767px) {
+      top: 45px;
+    }
+  }
+}

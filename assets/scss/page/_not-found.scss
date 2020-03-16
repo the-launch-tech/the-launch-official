@@ -1,0 +1,70 @@
+&.error404 {
+  .error-404 {
+    z-index: 0;
+    height: 100vh;
+    position: relative;
+
+    .page-content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      height: 100%;
+      padding: 0 5rem;
+
+      h1 {
+        position: relative;
+        z-index: 1;
+        color: $white;
+        line-height: 60px;
+        margin: 0;
+
+        @media (max-width: 991px) {
+          line-height: 56px;
+        }
+
+        @media (max-width: 767px) {
+          line-height: 54px;
+        }
+
+        @media (max-width: 599px) {
+          line-height: 50px;
+        }
+
+        @media (max-width: 399px) {
+          line-height: 44px;
+        }
+      }
+
+      h4 {
+        position: relative;
+        z-index: 1;
+        color: $white;
+      }
+
+      #globe-selector {
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 60px);
+      }
+
+      @media (max-width: 991px) {
+        padding: 0 4rem;
+      }
+
+      @media (max-width: 767px) {
+        padding: 0 3rem;
+      }
+
+      @media (max-width: 599px) {
+        padding: 0 2rem;
+      }
+
+      @media (max-width: 399px) {
+        padding: 0 1rem;
+      }
+    }
+  }
+}

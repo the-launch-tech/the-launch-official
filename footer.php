@@ -11,16 +11,13 @@
 
 ?>
 </div>
-<footer id="footer" class="footer">
-  <div class="footer-container">
-    <div class="footer-left"></div>
-    <div class="footer-center"></div>
-    <div class="footer-right"></div>
-  </div>
+<footer id="footer" class="footer <?php echo is_404() ? 'footer-404' : ''; ?>">
   <div class="site-info">
     <span class="site-info-text">©2020 The Launch | Developed and Designed by The Launch</span>
   </div>
-  <div id="net-selector"></div>
+  <?php if (!is_404()) : ?>
+    <div id="net-selector"></div>
+  <?php endif; ?>
 </footer>
 </div>
 <?php wp_footer(); ?>

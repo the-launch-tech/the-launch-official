@@ -9,40 +9,13 @@
 
 get_header();
 ?>
-<div id="content" class="site-content">
-	<div id="primary" class="content-area">
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'thelaunch' ); ?></h1>
-			</header>
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'thelaunch' ); ?></p>
-				<?php
-				get_search_form();
-				the_widget( 'WP_Widget_Recent_Posts' );
-				?>
-				<div class="widget widget_categories">
-					<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'thelaunch' ); ?></h2>
-					<ul>
-						<?php
-						wp_list_categories( array(
-							'orderby'    => 'count',
-							'order'      => 'DESC',
-							'show_count' => 1,
-							'title_li'   => '',
-							'number'     => 10,
-						) );
-						?>
-					</ul>
-				</div>
-				<?php
-				$thelaunch_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'thelaunch' ), convert_smilies( ':)' ) ) . '</p>';
-				the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$thelaunch_archive_content" );
-				the_widget( 'WP_Widget_Tag_Cloud' );
-				?>
-			</div>
-		</section>
-	</div>
-</div>
+<section class="error-404 not-found">
+	<div class="page-content">
+		<h1 class="page-title" data-aos="fade-right" data-aos-duration="800" data-aos-delay="1500">The Launch</h1>
+		<h4 class="header-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1500"><?php esc_html_e( "It looks like you're lost in space!", 'thelaunch' ); ?></h4>
+	</header>
+	<div id="globe-selector"></div>
+	<div id="globe-fader"></div>
+</section>
 <?php
 get_footer();
