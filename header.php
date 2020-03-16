@@ -21,16 +21,18 @@ $page->id = get_queried_object_id();
 		<link rel="shortcut icon" href="/wp-content/themes/thelaunch/assets/favicon.png" type="image/png">
 		<link rel="icon" href="/wp-content/themes/thelaunch/assets/favicon.png" type="image/png">
 		<link
-			  rel="stylesheet"
-			  href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css"
-			  integrity="sha384-TxKWSXbsweFt0o2WqfkfJRRNVaPdzXJ/YLqgStggBVRREXkwU7OKz+xXtqOU4u8+"
-			  crossorigin="anonymous"
-			  />
+		  rel="stylesheet"
+		  href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css"
+		  integrity="sha384-TxKWSXbsweFt0o2WqfkfJRRNVaPdzXJ/YLqgStggBVRREXkwU7OKz+xXtqOU4u8+"
+		  crossorigin="anonymous"
+	  />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119616295-2"></script>
 		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'UA-119616295-2');
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-119616295-2');
 		</script>
 		<?php wp_head(); ?>
 	</head>
