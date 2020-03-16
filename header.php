@@ -18,8 +18,8 @@ $page->id = get_queried_object_id();
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="https://gmpg.org/xfn/11">
-		<link rel="shortcut icon" href="wp-content/themes/thelaunch/assets/favicon.png" type="image/png">
-		<link rel="icon" href="wp-content/themes/thelaunch/assets/favicon.png" type="image/png">
+		<link rel="shortcut icon" href="/wp-content/themes/thelaunch/assets/favicon.png" type="image/png">
+		<link rel="icon" href="/wp-content/themes/thelaunch/assets/favicon.png" type="image/png">
 		<link
 			  rel="stylesheet"
 			  href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css"
