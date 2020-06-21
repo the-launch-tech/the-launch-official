@@ -254,3 +254,28 @@ a {
     font-size: 0.7rem;
   }
 }
+
+ol {
+  margin: 0 0 0 2rem;
+  padding: 0 0 0 1rem;
+
+  li {
+    margin: 1rem 0;
+  }
+}
+
+.entry-content {
+  p {
+    a {
+      font-size: inherit;
+    }
+  }
+
+  ul {
+    margin: 0 0 0 2rem;
+    padding: 0 0 0 1rem;
+    li {
+      margin: 1rem 0;
+    }
+  }
+}

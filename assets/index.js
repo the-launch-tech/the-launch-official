@@ -3,16 +3,20 @@ require('dotenv').config()
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import AOS from 'aos'
+import hljs from 'highlight.js'
+import javascript from 'highlight.js/lib/languages/javascript'
 import homeNavScroll from './js/utils/homeNavScroll'
 import portfolioPreview from './js/utils/portfolioPreview'
 import smoothScrollTo from './js/utils/smoothScrollTo'
 import faqAccordion from './js/utils/faqAccordion'
-import logoToggle from './js/utils/logoToggle'
 import vantaUtils from './js/utils/vantaUtils'
 import 'aos/dist/aos.css'
 import './scss/main.scss'
 
 const { log, error } = console
+
+hljs.registerLanguage('javascript', javascript)
+hljs.initHighlightingOnLoad()
 
 class TheLaunch {
   constructor() {
@@ -50,8 +54,6 @@ class TheLaunch {
     if (!this.is404Page) {
       VANTA.NET(vantaUtils.net)
     }
-
-    logoToggle()
 
     this.loader = document.getElementById('async-loader')
     setTimeout(() => {

@@ -39,7 +39,7 @@
 	    </ul>
 		</div>
   <?php endif; ?>
-	<div class="entry-content" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">
+	<div class="entry-content">
 		<?php the_content(); ?>
 	</div>
 </article>
