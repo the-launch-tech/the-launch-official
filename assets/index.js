@@ -7,6 +7,7 @@ import homeNavScroll from './js/utils/homeNavScroll'
 import portfolioPreview from './js/utils/portfolioPreview'
 import smoothScrollTo from './js/utils/smoothScrollTo'
 import faqAccordion from './js/utils/faqAccordion'
+import logoToggle from './js/utils/logoToggle'
 import vantaUtils from './js/utils/vantaUtils'
 import 'aos/dist/aos.css'
 import './scss/main.scss'
@@ -34,9 +35,9 @@ class TheLaunch {
       homeNavScroll()
       smoothScrollTo()
       portfolioPreview(this.baseUrl, this.loader)
-    } else if (this.isContactPage) {
-      faqAccordion()
     }
+
+    faqAccordion()
 
     if (this.isHomePage) {
       VANTA.GLOBE(vantaUtils.globe)
@@ -49,6 +50,8 @@ class TheLaunch {
     if (!this.is404Page) {
       VANTA.NET(vantaUtils.net)
     }
+
+    logoToggle()
 
     this.loader = document.getElementById('async-loader')
     setTimeout(() => {

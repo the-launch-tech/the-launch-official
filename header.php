@@ -48,7 +48,7 @@ $page->id = get_queried_object_id();
 				</nav>
 				<div id="header-title-section" class="header-title-section">
 					<h1 class="header-title" data-aos="fade-right" data-aos-duration="800" data-aos-delay="1500">The Launch</h1>
-					<p class="header-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1500">A small and focused web and application development agency founded in 2019.</p>
+					<p class="header-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1500">Your web and application development agency. Founded in 2019.</p>
 				</div>
 				<div id="globe-selector"></div>
 				<div id="globe-fader"></div>
